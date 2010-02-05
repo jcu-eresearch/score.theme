@@ -71,6 +71,9 @@ background-color: #EFF3F5;
 border: 1px solid #DDDDDD;
 color: #436976;
 }
+ul.LSTable {
+float: none;
+}
 .LSRow {
 border: 1px solid white;
 white-space: normal;
