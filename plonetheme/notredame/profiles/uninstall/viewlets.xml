@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<object>
+    <hidden manager="plone.portaltop" skinname="*" purge="True" />
+    <hidden manager="plone.portalheader" skinname="*" purge="True" />
+</object>

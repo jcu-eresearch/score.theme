@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<site>
+ <property name="title">Site</property>
+ <property name="description"></property>
+ <property name="email_from_address" type="string"></property>
+ <property name="email_from_name" type="string">Site Administrator</property>
+</site>

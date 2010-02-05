@@ -1,0 +1,174 @@
+Changelog
+=========
+
+
+1.2-beta3 - Unreleased
+----------------------
+
+* Code cosmetics
+  [daftdog]
+
+
+1.2-beta2 - 18.04.2009
+----------------------
+
+* Fixing CSS bugs in livesearch results display in IE 7
+  [daftdog]
+
+* Fixing CSS bug causing a gap under the global nav in IE7
+  [daftdog]
+
+
+1.2-beta1
+---------
+
+* Implementation of album view styles
+  [daftdog]
+
+
+1.1
+---
+
+* No changes
+  [daftdog]
+
+
+1.1-beta1
+---------
+
+* Fixed glitch with portalMessage style
+  [daftdog]
+
+* Made highlight color in authoring mode less shrill
+  [daftdog]
+
+* Adapted main and prefs templates for group and user configlet since the visual padding div created problems there
+  [daftdog]
+
+* Adapted configlet templates for topics/collections to fix padding and adapted padding in table.listing style
+  [daftdog]
+
+* The changes in templates and styles might have side-effects, hence the jump to 1.1-beta1. The kupu configlet templates
+  don't use skins layers, so they can't be overwritten and don't have a padding now, but at least the portalMessages are
+  readable now in groups and users panels.
+  [daftdog]
+
+
+1.0.3
+-----
+
+* Added custom favicon based on new plone logo
+  [daftdog]
+
+
+1.0.2
+-----
+
+* Making tile images float properly in summary view
+  [daftdog]
+
+* Making images in news items float on the right, looks better
+  [daftdog]
+
+
+1.0.1
+-----
+
+* Making live search in search portlet behave nicer
+  [daftdog]
+
+
+1.0
+---
+
+* Fixing float issues with collection criteria form
+  [daftdog]
+
+
+1.0b5
+-----
+
+* Unfloating more stuff in contents column.
+  [daftdog]
+      
+* Floating input fields of search portlet to make them fit in the column when
+      the browser window is narrow.
+  [daftdog]
+
+* Adding styles for kupu styles drop-down menu.
+  [daftdog]
+
+* Trying to make footer less prominent.
+  [daftdog]
+
+
+1.0b4
+-----
+
+* Unfloating stuff within the contents column to make work better on IE.
+  [daftdog]
+
+
+1.0b3
+-----
+
+* Added styles for left and right floating images in content area.
+  [daftdog]
+
+
+1.0b2
+-----
+
+* Fixing IE6 more, effect of last fixes was only visible in CSS debug mode.
+  [daftdog]
+
+* Introduced '.gif' alternatives for arrows in navigation as well.
+  [daftdog]
+
+
+1.0b1
+-----
+
+* Introduced some IE6 style fixes for display.
+  [daftdog]
+
+* Added gif-alternatives for background images for IE6. Just change the '.png' file endings in
+  the image definitions in base_properties to '.gif'.
+  [daftdog]
+
+* Switched from Zope 3 layers to plone.browserlayers for registration of visual components in zcml.
+  [daftdog]
+
+* Fixed @@manage-viewlets view to be at least somewhat usable.
+  [daftdog]
+
+
+1.0a2
+-----
+
+* Fixed alignment of arrows in navigation portlet.
+  [daftdog]
+
+* Fixed resizing functionality in accessibility-info page.
+  [daftdog]
+
+
+1.0a1
+-----
+
+* Small style adjustments for footer, forms and portlets.
+  [daftdog]
+
+   
+0.2
+---
+
+* First implementation of layout and design.
+  [daftdog]
+
+
+0.1
+---
+
+* Initial package structure.
+  [daftdog]

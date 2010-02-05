@@ -1,0 +1,619 @@
+/*
+** Plone style sheet - Authoring Elements
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundaments of Plone, and will
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade.
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+body#content.kupu {
+  background: none;
+  max-width: inherit;
+  min-width: inherit;
+}
+
+/* Editable border */
+
+.contentViews {
+  background-color: transparent;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.contentViews li {
+  display: inline;
+  float: left;
+  clear: none;
+  padding: 0 0 0 1em;
+}
+
+.contentViews li a {
+  background-color: transparent;
+  color: &dtml-contentViewFontColor;;
+  height: auto;
+  border: &dtml-borderWidth; &dtml-borderStyle; transparent;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  padding: 0.2em 1em;
+  margin: 0;
+  margin-bottom: -&dtml-borderWidth;;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: &dtml-textTransform;;
+  float: left;
+  clear: both;
+  z-index: 1;
+}
+
+.contentViews li.selected a, .contentViews li a:hover {
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+  border-top-width: 0;
+  border-bottom-color: &dtml-contentViewBackgroundColor;;
+  background-color: &dtml-contentViewBackgroundColor;;
+}
+
+.contentViews .selected a {
+  background-color: &dtml-contentViewBackgroundColor;;
+  border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
+  color: &dtml-contentViewFontColor;;
+}
+
+.contentViews li a:hover {
+  background-color: &dtml-contentViewBackgroundColor;;
+  color: &dtml-contentViewFontColor;;
+}
+
+.configlet .contentViews {
+  font-size: 90%;
+}
+
+/*
+** begin ECMAScript Content Action Menus
+*/
+.contentActions {
+  float: left;
+  clear: both;
+  width: 100%;
+  background-color: &dtml-contentViewBackgroundColor;;
+  color: &dtml-contentViewFontColor;;
+  text-align: right;
+  text-transform: &dtml-textTransform;;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  border-bottom: &dtml-contentViewBorderColor; &dtml-borderWidth; &dtml-borderStyle;;
+  line-height: 1.6em;
+}
+
+.contentActions ul,
+.contentActions li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+  color: &dtml-fontColor;;
+  text-align: left;
+  line-height: 1.6em;
+}
+
+.contentActions li {
+  float: right;
+  z-index: 4;
+  border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+}
+
+.contentActions a {
+  text-decoration: none;
+  color: &dtml-contentViewFontColor;;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+
+.contentActions a:hover {
+  text-decoration: none;
+}
+
+.contentActions span.subMenuTitle {
+  padding: 0em 0.5em;
+  position: relative;
+  display: inline;
+}
+
+.contentActions a span.subMenuTitle {
+  padding: 0px;
+  display: inline;
+}
+
+.actionMenu {
+  /* The spec says we can't put this on an element with a float (although
+  Opera is the only one that cares) and we need it in order to catch
+  the position:absolute bubbling up */
+
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.actionMenu .actionMenuHeader {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.actionMenu.activated .actionMenuHeader {
+  position: relative;
+  z-index: 10;
+}
+
+.actionMenu .actionMenuHeader a {
+  display: block;
+}
+
+.arrowDownAlternative {
+  font-size: 0.85em;
+  color: &dtml-contentViewBackgroundHighlightColor;;
+}
+
+.actionMenu .actionMenuContent {
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: 1.6em;
+  right: -1px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.actionMenu.activated .actionMenuContent {
+  display: block !important;
+}
+
+.actionMenu.activated .actionMenuContent {
+  /* this one will be ignored by IE, it is here to fix the cut-off error in
+  Firefox */
+  display: table !important;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.actionMenu.deactivated .actionMenuContent {
+  display: none !important;
+}
+
+.actionMenu .actionMenuContent ul {
+  display: block;
+  background: &dtml-contentViewBackgroundColor;;
+  border: &dtml-borderWidth; &dtml-contentViewBorderColor;;
+  border-style: none &dtml-borderStyle; &dtml-borderStyle; &dtml-borderStyle;;
+  margin: -2px 0 0 0;
+  padding: 0;
+}
+
+.actionMenu .actionMenuContent li {
+  float: none;
+  background-color: transparent;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.actionMenu .actionMenuContent li a {
+  display: block;
+  white-space: nowrap;
+  margin: 0.2em 0;
+}
+
+.actionMenu .actionMenuContent .selected {
+  display: block;
+  white-space: nowrap;
+  padding: 0 0.5em;
+  margin: 0.2em 0;
+}
+
+.actionMenu .actionMenuContent li a:hover {
+  background-color: &dtml-contentViewBackgroundHighlightColor;;
+  color: &dtml-contentViewFontHighlightColor;;
+}
+
+.actionMenu .actionMenuContent .actionSeparator a {
+  padding-top: 0.2em;
+  border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+}
+
+#templateMenu li a {
+  padding-left: 16px;
+}
+/*
+** end ECMAScript Content Action Menus
+*/
+
+ul.configlets {
+  margin: 1em 0;
+  list-style-image: none;
+  list-style: none;
+}
+
+ul.configlets li {
+  margin-bottom: 1em;
+}
+
+ul.configlets li a {
+  text-decoration: none;
+  border: none;
+}
+
+ul.configlets li a:visited {
+  color: &dtml-linkColor;;
+  background-color: transparent;
+}
+
+ul.configlets li a:active {
+  color: &dtml-linkColor;;
+  background-color: transparent;
+}
+
+ul.configlets li label {
+  font-weight: bold;
+}
+
+ul.configletDetails {
+  margin: 0em 1em 1em 4em;
+  list-style-image: none;
+  list-style: none;
+}
+
+ul.configletDetails li {
+  margin-bottom: 1em;
+  display: inline;
+}
+
+ul.configletDetails li a {
+  text-decoration: none;
+}
+
+ul.configletDetails li label {
+  font-weight: bold;
+}
+
+ul.configletDetails li.configletDescription {
+  display: block;
+  color: &dtml-discreetColor;;
+  font-size: &dtml-fontDiscreetSize;;
+  margin: 0;
+}
+
+/* Additional STX workaround classes */
+.stx table p {
+  margin: 0;
+  padding: 0;
+}
+
+.stx table {
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor; ! important;
+}
+
+.stx table td {
+  border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+div#review-history {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.listingCheckbox {
+  text-align: center;
+}
+
+div#review-history table.listing {
+  text-align: left;
+}
+
+div#review-history table.listing th, div#review-history table.listing td {
+  padding: 3px 1em;
+}
+
+.comment {
+  background: &dtml-evenRowBackgroundColor;;
+  border: &dtml-borderWidth; &dtml-borderStyleAnnotations; &dtml-globalBorderColor;;
+  padding: 0.25em 1em 0.5em 1em;
+  margin-bottom: 1em;
+}
+
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4,
+.comment h5,
+.comment h6 {
+  border-bottom: &dtml-borderWidth; &dtml-borderStyleAnnotations; &dtml-discreetColor;;
+  font-weight: normal;
+}
+
+.comment h3 a {
+  background-image: url(&dtml-portal_url;/discussionitem_icon.gif);
+  background-repeat: no-repeat;
+  padding-left: 18px;
+  margin-left: -1px;
+  margin-bottom: 1px;
+  min-height: 1.6em;
+  height: auto;
+  line-height: 1.6em;
+}
+
+.commentBody {
+  margin: 0 1em 1em 1em;
+}
+.spacer {
+  margin: 1em;
+}
+
+/* Collapsible elements */
+dl.collapsible {
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor; !important;
+  margin: 1em 0 0 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+dl.collapsible dt.collapsibleHeader {
+  display: block;
+  float: left;
+  background: &dtml-backgroundColor;;
+  line-height: 1.2em;
+  vertical-align: middle;
+  font-size: 90%;
+  position: relative;
+  top: -1.5em;
+  width: auto;
+  margin: 0 0 -1.5em 0;
+  padding: 0 0.5em;
+}
+
+dl.collapsible dd.collapsibleContent {
+  margin: 0;
+  padding: 0 1em;
+  clear: left;
+}
+
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+  margin: 0;
+  padding: 0;
+}
+
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+  padding: 0 6px 0 22px;
+  background: &dtml-backgroundColor; url(treeExpanded.gif) no-repeat 6px 50%;
+  cursor: pointer;
+}
+
+dl.collapsedBlockCollapsible {
+  border: none !important;
+  height: 1em;
+  width: auto;
+}
+
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+  float: none;
+  position: static;
+  margin: 0;
+  padding: 0 0 0 22px;
+  line-height: 1em;
+  background: transparent url(treeCollapsed.gif) no-repeat 6px 50%;
+  cursor: pointer;
+}
+
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+  display: none;
+}
+
+dl.collapsedInlineCollapsible {
+  border: none !important;
+  height: 1em;
+  width: auto;
+  display: inline;
+}
+
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+  position: static;
+  float: none;
+  margin: 0;
+  padding: 0 0 0 22px;
+  line-height: 1em;
+  background: transparent url(treeCollapsed.gif) no-repeat 6px 50%;
+  cursor: pointer;
+  display: inline;
+}
+
+.documentEditable {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.documentEditable fieldset {
+  margin-top: 1.4em;
+}
+
+.documentEditable .field {
+  margin-right: 0;
+}
+
+.formControls, .documentEditable .formControls {
+  margin: 0;
+  padding: 1em 0;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.documentEditable .documentContent {
+  border: none;
+  padding: 0;
+}
+
+.label {
+  font-weight: bold;
+  display: inline;
+  padding-right: 0.5em;
+}
+
+.optionsToggle {
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+  color: &dtml-fontColor;;
+  background-color: &dtml-globalBackgroundColor;;
+  font-weight: normal !important;
+  font-size: &dtml-fontDiscreetSize;;
+}
+
+/* Used on all descriptions relevant to those not logged in */
+.portalNotLoggedIn {}
+
+#portal-column-content fieldset > * input:focus,
+#portal-column-content fieldset > * textarea:focus {
+  border-color: &dtml-notifyBorderColor;;
+  border-width: &dtml-borderWidth;;
+}
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+  background-color: #ffa;
+}
+
+dl.searchResults .highlightedSearchTerm {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+/* for greying out inherited roles */
+.noInheritedRoles {
+  color: #a0a0a0;
+}
+
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+  border-collapse: collapse;
+  border: 2px &dtml-borderStyle; &dtml-notifyBorderColor;;
+  padding: 1px;
+}
+
+/* for draggable elements */
+tr.dragging td {
+background-color: #ff6;
+}
+.draggingHook {
+cursor: move;
+}
+.notDraggable {
+}
+
+.managePortletsLink {
+  display: block;
+  color: &dtml-discreetColor;;
+  font-size: &dtml-fontDiscreetSize;;
+  font-weight: normal;
+}
+
+ul.formTabs {
+  position: relative;
+  display: block;
+  margin: 0 0 -2em 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+li.formTab {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background-color: &dtml-globalBackgroundColor;;
+}
+
+li.formTab a {
+/* this isn't supported by all browsers, so we keep it in a separate rule */
+  display: inline-block;
+}
+
+li.formTab a {
+  border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+  border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+  border-left: &dtml-borderWidth; dotted &dtml-contentViewBorderColor;;
+  background: &dtml-backgroundColor;;
+  margin: 0;
+  padding: 0.125em 0.75em;
+  text-decoration: none;
+}
+
+li.firstFormTab a {
+  border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+li.lastFormTab a {
+  border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+li.formTab a.selected {
+  background: &dtml-contentViewBackgroundColor;;
+}
+
+li.formTab a:hover {
+  background: &dtml-contentViewBackgroundColor;;
+}
+
+li.formTab a.notify {
+  background-color: &dtml-notifyBackgroundColor;;
+  color: &dtml-fontColor;;
+}
+
+li.formTab a.required span {
+  background-image: url(&dtml-portal_url;/required.gif);
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: 8px;
+}
+
+li.formTab a.notify:hover {
+  background-color: &dtml-notifyBorderColor;;
+}
+
+.formPanel {
+  padding: 1em 1em 1em 1em;
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+.formPanel.hidden {
+  display: none;
+}
+
+div.formControls input.hidden {
+  display: none;
+}
+
+/* </dtml-with> */

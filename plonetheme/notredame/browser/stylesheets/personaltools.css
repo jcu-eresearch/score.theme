@@ -1,0 +1,9 @@
+ul#portal-personaltools {
+  list-style: none;
+  margin: 0.4em 0;
+}
+
+ul#portal-personaltools li {
+  display: inline;
+  padding: 0 0.4em;
+}

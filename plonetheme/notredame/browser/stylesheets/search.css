@@ -1,0 +1,39 @@
+dl.portletSearch input.searchField, dl.portletSearch input.searchButton {
+	float: left;
+	clear: none;
+}
+
+dl.portletSearch input.searchField {
+	margin-right: 0.5em;
+}
+
+dl.portletSearch div.LSResult {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+dl.portletSearch fieldset.livesearchContainer {
+    position: absolute;
+    margin: 0;
+    padding: 0 0.5em 0.5em 0.5em;
+    top: 1.4em;
+    #top: 1.7em;
+    left: 0;
+    background-color: #ffffff;
+}
+
+dl.portletSearch fieldset.livesearchContainer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+dl.portletSearch fieldset.livesearchContainer ul span.discreet {
+	
+}
+
+dl.portletSearch fieldset.livesearchContainer ul div.LSDescr {
+	font-size: 0.8em;
+	margin-left: 21px;
+}

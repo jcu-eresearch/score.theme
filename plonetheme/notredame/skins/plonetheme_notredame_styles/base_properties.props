@@ -1,0 +1,81 @@
+title:string=Notre Dame's color, font, logo and border defaults
+
+plone_skin:string=Notre Dame
+
+logoName:string=score_logo.png
+
+fontFamily:string=Trebuchet, Trebuchet MS, Verdana, Helvetica, Geneva, sans-serif
+fontBaseSize:string=small
+fontColor:string=#363636
+fontInvertedColor:string=#ffffff
+fontSmallSize:string=0.7em
+fontLargeSize:string=1.2em
+
+fontDiscreetSize:string=0.9em
+fontHeaderSize:string=1.3em
+
+backgroundColor:string=transparent
+backgroundImage:string=++resource++plonetheme.notredame.images/score_background_slice.png
+backgroundRepeat:string=repeat-x
+backgroundPosition:string=top left
+
+portalBackgroundColor:string=transparent
+portalBackgroundImage:string=++resource++plonetheme.notredame.images/score-icon-background.png
+portalBackgroundRepeat:string=no-repeat
+portalBackgroundPosition:string=96% 25px
+
+headerBackgroundColor:string=transparent
+headerBackgroundImage:string=++resource++plonetheme.notredame.images/transparent.png
+headerBackgroundRepeat:string=no-repeat
+headerBackgroundPosition:string=top left
+
+globalNavBackgroundColor:string=transparent
+globalNavBackgroundImage:string=++resource++plonetheme.notredame.images/global-tabs-gray.png
+globalNavBackgroundRepeat:string=repeat
+globalNavBackgroundPosition:string=top left
+
+linkColor:string=#012f60
+linkHighlightedColor:string=#369ac8
+linkDecoration:string=none
+linkHoverDecoration:string=underline
+linkActiveColor:string=#012f60
+linkVisitedColor:string=#012f60
+
+borderWidth:string=1px
+borderStyle:string=solid
+borderStyleAnnotations:string=solid
+
+globalBorderColor:string=#cccccc
+globalBackgroundColor:string=#ffffff
+globalFontColor:string=#436976
+
+outerBorderColor:string=#2575ad
+
+headingFontFamily:string=Georgia, serif;
+headingSecondaryFontFamily:string=Arial, sans-serif
+headingFontColor:string=#2575ad
+headingSecondaryFontColor:string=#333333
+
+contentViewBorderColor:string=#cccccc
+contentViewBackgroundColor:string=#e3e3e6
+contentViewBackgroundHighlightColor:string=#012f60
+contentViewFontColor:string=#333333
+contentViewFontHighlightColor:string=#ffffff
+
+inputFontColor:string=Black
+
+textTransform:string=none
+
+evenRowBackgroundColor:string=transparent 
+oddRowBackgroundColor:string=transparent
+
+notifyBorderColor:string=#eecc55
+notifyBackgroundColor:string=#ffffaa
+
+discreetColor:string=#555464
+helpBackgroundColor:string=#ffffe1
+
+portalMinWidth:string=70em
+portalMaxWidth:string=180em
+columnOneWidth:string=18%
+columnTwoWidth:string=18%

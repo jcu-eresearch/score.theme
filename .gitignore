@@ -1,0 +1,7 @@
+eggs
+develop-eggs
+parts
+bin
+*.pyc
+*.pyo
+plonetheme.notredame.egg-info

@@ -1,0 +1,69 @@
+dl.portletNavigationTree dt.portletHeader {
+  padding-bottom: 0.2em;
+  margin-bottom: 0;
+  border-bottom: 3px;
+  border-bottom-style: solid;
+}
+
+dl.portletNavigationTree {
+  padding-bottom: 0;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+dl.portletNavigationTree dd.portletItem ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl.portletNavigationTree dd.portletItem li ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 14px;
+}
+
+dl.portletNavigationTree dd.portletItem {
+  border: none;
+}
+
+dl.portletNavigationTree dd.portletItem ul li a {
+  display: block;
+  margin: 0;
+  padding: 0.3em 0 0.3em 14px;
+}
+
+dl.portletNavigationTree dd.portletItem ul li a img {
+  vertical-align: text-top;
+}
+
+dl.portletNavigationTree dd.portletItem ul li a.navTreeCurrentItem {
+  background: transparent url('++resource++plonetheme.notredame.images/arrow-darkblue.png') 0 0.5em no-repeat;
+}
+
+dl.portletNavigationTree dd.portletItem ul li a.navTreeItemInPath {
+  background: transparent url('++resource++plonetheme.notredame.images/arrow-darkblue_down.png') 0 0.5em no-repeat;
+}
+
+dl.portletNavigationTree dd.portletItem ul li a:hover {
+  background: transparent url('++resource++plonetheme.notredame.images/arrow-gray.png') 0 0.5em no-repeat;
+  text-decoration: none;
+}
+
+ul#portal-sitemap {
+  margin: 1em 0;
+}
+
+ul#portal-sitemap li {
+  margin: 0.5em 0;
+}
+
+ul#portal-sitemap li a {
+  display: block;
+  padding: 0.1em 0;
+}
+
+.navTreeItem {
+  display: block;
+  line-height: 1.2em;
+}

@@ -1,0 +1,15 @@
+div.documentActions {
+  float: right;
+  clear: both;
+  width: 100%;
+  text-align: right;
+}
+
+div.documentActions ul {
+  list-style: none;
+}
+
+div.documentActions ul li {
+  display: inline;
+  padding: 0 0 0 1em;
+}

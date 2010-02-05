@@ -1,0 +1,12 @@
+div#portal-colophon {
+  text-align: center;
+}
+
+div#portal-colophon ul {
+  list-style: none;
+}
+
+div#portal-colophon ul li {
+  display: inline;
+  padding: 0.5em 2em;
+}

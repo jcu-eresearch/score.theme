@@ -1,0 +1,269 @@
+/*
+  This file is based on the ploneCustom.css.dtml file shipped with Plone.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* YOUR CSS RULES START HERE */
+
+body {
+  background-image: url('&dtml-backgroundImage;');
+  background-position: &dtml-backgroundPosition;;
+  background-repeat: &dtml-backgroundRepeat;;
+  background-color: &dtml-backgroundColor;;
+  font-family: &dtml-fontFamily;;
+  font-size: &dtml-fontBaseSize;;
+  color: &dtml-fontColor;;
+}
+
+body.largeText {
+  font-size: &dtml-fontLargeSize;;
+}
+
+body.smallText {
+  font-size: &dtml-fontSmallSize;;
+}  
+
+div#visual-portal-wrapper {
+  background-image: url('&dtml-portalBackgroundImage;');
+  background-position: &dtml-portalBackgroundPosition;;
+  background-repeat: &dtml-portalBackgroundRepeat;;
+  background-color: &dtml-portalBackgroundColor;;
+}
+
+div#portal-header {
+  background-image: url('&dtml-headerBackgroundImage;');
+  background-position: &dtml-headerBackgroundPosition;;
+  background-repeat: &dtml-headerBackgroundRepeat;;
+  background-color: &dtml-headerBackgroundColor;;
+}
+
+div#portal-columns {
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-outerBorderColor;;
+  border-bottom-color: &dtml-outerBorderColor;;
+  background: &dtml-globalBackgroundColor;;
+}
+
+div#portal-column-content.sr {
+  border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+div#portal-column-content.sl {
+  border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+a {
+  text-decoration: &dtml-linkDecoration;;
+  color: &dtml-linkColor;;
+}
+
+a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+h1 {
+  font-family: &dtml-headingFontFamily;;
+  color: &dtml-headingFontColor;;
+}
+
+h2 {
+  font-family: &dtml-headingSecondaryFontFamily;;
+  color: &dtml-headingFontColor;;
+}
+
+h3 {
+  font-family: &dtml-headingSecondaryFontFamily;;
+  color: &dtml-headingFontColor;;
+  border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-headingFontColor;;
+}
+
+p.documentDescription {
+  color: &dtml-discreetColor;;
+}
+
+div#visual-portal-wrapper {
+  font-size: &dtml-fontBaseSize;;
+}
+
+#plone-document-byline, .discreet {
+  font-size: &dtml-fontDiscreetSize;;
+  color: &dtml-discreetColor;;
+}
+
+div#portal-breadcrumbs a {
+  color: &dtml-linkHighlightedColor;;
+  text-decoration: &dtml-linkDecoration;;
+}
+
+div#portal-breadcrumbs a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+dl.portlet {
+  border-bottom-color: &dtml-globalBorderColor;;
+  font-family: &dtml-headingSecondaryFontFamily;;
+}
+
+dl.portlet dt.portletHeader {
+  font-size: &dtml-fontHeaderSize;;
+  color: &dtml-headingFontColor;;
+}
+
+dl.portlet dt.portletHeader a, dl.portlet dd.portletFooter a {
+  text-decoration: &dtml-linkDecoration;;
+  color: &dtml-headingFontColor;;
+}
+
+dl.portlet dt.portletHeader a:hover, dl.portlet dd.portletFooter a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+dl.portlet dd.portletItem {
+  border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+dl.portlet dd.portletItem .portletItemDetails {
+  font-size: &dtml-fontDiscreetSize;;
+}
+
+dl.portlet dd.portletItem a {
+  text-decoration: &dtml-linkDecoration;;
+}
+
+dl.portletNavigationTree {
+  border-bottom-color: &dtml-globalBorderColor;;
+}
+
+dl.portlet dd.portletItem a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+dl.portletNavigationTree dt.portletHeader a {
+  color: &dtml-linkColor;;
+}
+
+dl.portletNavigationTree dd.portletItem {
+  font-size: &dtml-fontHeaderSize;;
+}
+
+dl.portletNavigationTree dt.portletHeader {
+  border-bottom-color: &dtml-linkColor;;
+}
+
+dl.portletCalendar dt.portletHeader {
+  border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+}
+
+dl.portletCalendar th {
+  font-family: &dtml-headingSecondaryFontFamily;;
+  color: &dtml-headingSecondaryFontColor;;
+}
+
+dl.portletCalendar td.todayevent, td.todaynoevent {
+  border-color: &dtml-linkColor;;
+}
+
+ul#portal-personaltools {
+  font-size: &dtml-fontDiscreetSize;;
+}
+
+ul#portal-personaltools li a {
+  color: &dtml-fontInvertedColor;;
+  text-decoration: &dtml-linkDecoration;;
+}
+
+ul#portal-personaltools li a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+ul#portal-siteactions {
+  font-size: &dtml-fontDiscreetSize;;
+}
+
+ul#portal-siteactions li a {
+  color: &dtml-fontInvertedColor;;
+  text-decoration: &dtml-linkDecoration;;
+}
+
+ul#portal-siteactions li a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+ul#portal-languageselector {
+  font-size: &dtml-fontDiscreetSize;;
+}
+
+ul#portal-languageselector li a {
+  color: &dtml-fontInvertedColor;;
+  text-decoration: &dtml-linkDecoration;;
+}
+
+ul#portal-languageselector li a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+div.documentActions ul li a {
+  text-decoration: &dtml-linkDecoration;;
+}
+
+div.documentActions ul li a:hover {
+  text-decoration: &dtml-linkHoverDecoration;;
+}
+
+div#portal-footer {
+  background-image: url('&dtml-globalNavBackgroundImage;');
+  background-position: &dtml-globalNavBackgroundPosition;;
+  background-repeat: &dtml-globalNavBackgroundRepeat;;
+  background-color: &dtml-globalNavBackgroundColor;;
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-outerBorderColor;;
+  color: &dtml-fontInvertedColor;;
+}
+
+div#portal-footer a {
+  color: &dtml-fontInvertedColor;;
+}
+
+ul#portal-globalnav {
+  background-image: url('&dtml-globalNavBackgroundImage;');
+  background-position: &dtml-globalNavBackgroundPosition;;
+  background-repeat: &dtml-globalNavBackgroundRepeat;;
+  background-color: &dtml-globalNavBackgroundColor;;
+  border: &dtml-borderWidth; &dtml-borderStyle; &dtml-outerBorderColor;;
+  border-bottom-color: &dtml-linkColor;;
+  font-family: &dtml-headingSecondaryFontFamily;;
+}
+
+ul#portal-globalnav li a {
+  font-size: &dtml-fontHeaderSize;;
+  color: &dtml-fontInvertedColor;;
+  text-decoration: &dtml-linkDecoration;;
+}
+
+ul#portal-globalnav li a:hover, ul#portal-globalnav li.selected a {
+  background: &dtml-linkColor;;
+}
+
+table.listing, table.listing th, table.listing td {
+  border-color: &dtml-globalBorderColor;;
+}
+
+pre {
+  font-size: &dtml-fontHeaderSize;;
+}
+
+.visualHighlight {
+  background-color: &dtml-notifyBorderColor;;
+}
+
+.pullquote, .callout {   
+    border-left-color: &dtml-contentViewBackgroundColor:;;
+    color: &dtml-linkColor;;
+}
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */
+
+/* Latest version of the documentation on pre-defined properties from Plone 
+   can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */

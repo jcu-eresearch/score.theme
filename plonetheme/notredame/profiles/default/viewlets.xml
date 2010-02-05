@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<object>
+ <order manager="plone.portaltop" skinname="Notre Dame">
+  <viewlet name="plone.site_actions" insert-before="*"/>
+  <viewlet name="plone.personal_bar" insert-after="plone.site_actions"/>
+  <viewlet name="plone.searchbox" insert-after="plone.personal_bar" />
+ </order>
+ <order manager="plone.abovecontenttitle" skinname="Notre Dame">
+  <viewlet name="plonetheme.notredame.path_bar" insert-before="*"/>
+  <viewlet name="plone.skip_links" insert-after="plonetheme.notredame.path_bar"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Notre Dame">
+  <viewlet name="plonetheme.notredame.logo" insert-after="plone.site_actions"/>
+  <viewlet name="plone.global_sections" insert-after="plonetheme.notredame.logo"/>
+ </order>
+  
+ <hidden manager="plone.portaltop" skinname="Notre Dame">
+  <viewlet name="plone.path_bar"/>
+  <viewlet name="plone.header"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="Notre Dame">
+  <viewlet name="plone.logo" />
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.skip_links"/>
+ </hidden>
+</object>

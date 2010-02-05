@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonetheme.notredame">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Notre Dame"
+      directory="profiles/default"
+      description='Extension profile for the "Notre Dame" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Notre Dame Uninstall Profile"
+      directory="profiles/uninstall"
+      description='Removes "Notre Dame" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+</configure>

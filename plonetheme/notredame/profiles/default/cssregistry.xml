@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<object name="portal_css">
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/main.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/portalmessage.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/layout.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/portaltop.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/siteactions.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/personaltools.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/dashboard.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/globalnav.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/pathbar.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/portlets.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/navigation.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/calendar.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/search.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/documentactions.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/content.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/footer.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/colophon.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/languageselector.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/manageviewlets.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title=""
+    id="++resource++plonetheme.notredame.stylesheets/albums.css"
+    media="screen" rel="stylesheet" rendering="import"
+    cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression=""/>
+
+ <stylesheet title="" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="score_customisations.css" media="all" rel="stylesheet" rendering="import"/>
+
+</object>

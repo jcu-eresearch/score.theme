@@ -1,0 +1,32 @@
+dl.portletCalendar dt.portletHeader {
+  line-height: 1.5em;
+  text-align: center;
+}
+
+dl.portletCalendar table.ploneCalendar {
+  width: 100%;
+  line-height: 1em;
+}
+
+dl.portletCalendar dd.portletItem {
+  border: none;
+}
+
+dl.portletCalendar th {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+dl.portletCalendar td {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+dl.portletCalendar td.event, dl.portletCalendar td.todayevent {
+  background-color: #81c9f6;
+}
+
+dl.portletCalendar td.todayevent, dl.portletCalendar td.todaynoevent {
+  border-width: 2px;
+  border-style: solid;
+}

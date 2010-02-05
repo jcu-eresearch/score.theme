@@ -1,0 +1,47 @@
+div#dashboard {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+div#dashboard-actions {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+div#dashboard-actions ul {
+  list-style: none;
+}
+
+div#dashboard-actions ul li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+div#dashboard-portlets1 {
+  float: left;
+  width: 22%;
+  margin: 0 1%;
+}
+
+div#dashboard-portlets2 {
+  float: left;
+  width: 22%;
+  margin: 0 1%;
+}
+
+div#dashboard-portlets3 {
+  float: left;
+  width: 22%;
+  margin: 0 1%;
+}
+
+div#dashboard-portlets4 {
+  float: left;
+  width: 22%;
+  margin: 0 1%;
+}

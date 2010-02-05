@@ -1,0 +1,189 @@
+/*
+    This file is based on the ploneCustom.css.dtml file shipped with Plone.
+
+    <dtml-with base_properties> (do not remove this :) 
+    <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) 
+*/
+
+div#SiteTitle {
+  float: left;
+  padding-left: 20px;
+}
+
+#portal-top {
+    z-index: 2;
+}
+
+body { background-color: #2974ab; } 
+
+div#content.documentContent {
+    margin-left: 1em;
+}
+
+div#dashboard-actions {
+    float: right;
+    width:auto;
+}
+
+ul#portal-personaltools li a {
+    color:&dtml-linkActiveColor;;
+    text-decoration:none;
+}
+ul#portal-siteactions li a {
+    color:&dtml-linkActiveColor;;
+    text-decoration:none;
+}
+
+div#portal-breadcrumbs {
+    margin: 0.5em 0 0.5em;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+}
+
+a#portal-logo {
+    margin: 0.25em 0;
+}
+div#portal-searchbox {
+    clear: right;
+    float: right;
+}
+
+.LSRes {
+font-family:  Arial, Helvetica, sans-serif;
+visibility: visible;
+color: #436976;
+background-color: white;
+vertical-align: middle;
+display:block;
+list-style-image: none;
+list-style-type: none;
+text-align: left;
+min-width: 16.5em;
+text-transform: none;
+margin-left: 0;
+line-height: 1.1em;
+}
+#LSHighlight,
+.LSHighlight {
+background-color: #EFF3F5;
+border: 1px solid #DDDDDD;
+color: #436976;
+}
+.LSRow {
+border: 1px solid white;
+white-space: normal;
+padding:0;
+margin: 0;
+list-style-image: none;
+list-style-type: none;
+}
+.LSRow a {
+text-decoration: none;
+font-weight:bold;
+white-space:nowrap
+}
+.LSDescr {
+color: #76797c;
+text-transform: none;
+padding-left:2.1em;
+margin-top:-0.1em;
+}
+.LSResult {
+position: relative;
+display: block;
+text-align: right;
+padding-top: 5px;
+margin: 0;
+left: 3px;
+z-index: 3;
+}
+.LSShadow {
+position: relative;
+text-align: right;
+}
+.livesearchContainer {
+background-color: white;
+filter:alpha(opacity=90);
+-moz-opacity:0.90;
+-khtml-opacity: 0.90;
+opacity: 0.90;
+margin-top: 0;
+padding: 0 !important;
+position: absolute;
+right: 0px;
+top: 0;
+white-space: normal;
+font-family:  Arial, Helvetica, sans-serif;
+visibility: visible;
+text-align: left;
+color: #436976;
+border: 1px solid #DDDDDD;
+width: 30em;
+text-transform: none;
+}
+
+* html .livesearchContainer {
+padding: 1px !important;
+padding-top: 0 !important;
+background-color: #DDDDDD;
+border: 0;
+}
+#livesearchLegend {
+line-height: 1em;
+margin-top: -2em;
+margin-left: -1px;
+border: 1px solid #DDDDDD;
+border-bottom: 0;
+}
+* html #livesearchLegend {
+margin-top: -1.9em;
+margin-left: -8px;
+position: relative;
+}
+/* */
+.LSIEFix {
+background-color: white;
+padding: 0.5em !important;
+z-index: 20;
+}
+.LSBox {
+clear: left;
+float: left;
+text-align: right;
+padding-right: 1px;
+display:block;
+}
+#LSNothingFound {
+text-align: center;
+padding: 2px;
+}
+.LSBox label {
+font-weight: normal;
+}
+
+
+dl.portalMessage dt {
+    float:left;
+    padding:0.5em;
+    margin-right:0.5em;
+}
+
+div#portal-colophon ul li a {
+    color:&dtml-globalBackgroundColor;;
+}
+
+body#content.kupu {
+    background: &dtml-portalBackgroundColor; none !important;
+}
+
+.navTreeLevel0, .navTreeLevel1, .navTreeLevel2 {
+    font-size: 85%;
+}
+
+
+/* </dtml-with> */
+
+
+

@@ -1,0 +1,55 @@
+dl.portalMessage {
+  font-size: 0.9em;
+  border: 1px solid #c99;
+}
+
+dl.portalMessage a {
+  color: black;
+  border: none;
+  text-decoration: underline;
+}
+
+dl.portalMessage dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0.3em 0.75em;
+  color: White;
+  line-height: 1.25em;
+}
+
+dl.portalMessage dd {
+  padding: 0.5em 0.5em;
+  margin: 0;
+  line-height: 1.25em;
+}
+
+dl.info {
+  background: #ebf0f5;
+  border-color: #999999;
+}
+
+dl.info dt {
+  background: #012f60;
+}
+
+dl.warning {
+  background-color: #ffffaa;
+  border-color: #eecc55;
+}
+
+dl.warning dt {
+  background-color: #eecc55;
+}
+
+dl.error {
+  background-color: #ffee77;
+  border-color: #dd0000;
+}
+
+dl.error dt {
+  background-color: #dd0000;
+}
+
+dl.info dd, dl.warning dd, dl.error dd {
+  background-color: transparent;
+}

@@ -1,0 +1,12 @@
+div#portal-breadcrumbs {
+  margin: 1.5em 0 0.5em 0;
+}
+
+div#portal-breadcrumbs span {
+  color: #75818f;
+}
+
+div#portal-breadcrumbs span.breadcrumbSeparator {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}

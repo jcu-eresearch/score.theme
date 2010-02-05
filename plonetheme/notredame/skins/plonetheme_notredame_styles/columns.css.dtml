@@ -1,0 +1,50 @@
+/*
+** Table-less column layout for all browsers.
+*/
+
+/* <dtml-with base_properties> */
+
+div#visual-portal-wrapper {
+  min-width: <dtml-var portalMinWidth missing="70em">;
+  max-width: <dtml-var portalMaxWidth missing="200em">;
+}
+
+#portal-column-content.sl {
+  margin-left: <dtml-var columnOneWidth missing="16em">;
+}
+
+#portal-column-one {
+  float: left;
+  width: <dtml-var columnOneWidth missing="16em">;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-column-content.sr {
+  margin-right: <dtml-var columnTwoWidth missing="16em">;
+}
+
+#portal-column-two {
+  float: right;
+  width: <dtml-var columnTwoWidth missing="16em">;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-content-wrapper {
+  float: left;
+  width: 100%;
+}
+
+/* fullscreen */
+body.fullscreen #portal-column-one,
+body.fullscreen #portal-column-two {
+  display: none;
+}
+
+body.fullscreen #portal-column-content {
+  margin: 0;
+  padding: 0;
+}
+
+/* </dtml-with> */

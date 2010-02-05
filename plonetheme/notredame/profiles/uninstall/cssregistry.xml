@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<object name="portal_css">
+
+ <stylesheet 
+    id="++resource++plonetheme.notredame.stylesheets/main.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/portalmessage.css"
+    remove="True" />
+
+ <stylesheet 
+    id="++resource++plonetheme.notredame.stylesheets/layout.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/portaltop.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/siteactions.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/personaltools.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/dashboard.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/globalnav.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/pathbar.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/portlets.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/navigation.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/calendar.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/search.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/documentactions.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/content.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/footer.css"
+    remove="True" />
+
+ <stylesheet 
+    id="++resource++plonetheme.notredame.stylesheets/colophon.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/languageselector.css"
+    remove="True" />
+
+ <stylesheet
+    id="++resource++plonetheme.notredame.stylesheets/manageviewlets.css"
+    remove="True" />
+
+ <stylesheet id="++resource++plonetheme.notredame.stylesheets/albums.css"
+    remove="True" />
+
+ <stylesheet id="score_customisations.css" remove="True" />
+
+</object>

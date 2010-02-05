@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<site>
+ <property name="title">ARC Sewer Corrosion and Odour Research Linkage Project</property>
+ <property name="description">Water Utilities throughout Australia join with the world’s leading researchers led by AWMC. Water utilities in Australia incur massive costs each year to control corrosion and odour emissions in sewers. Despite major effort and expense, odour emissions are still commonly occurring from sewers in urban areas. Furthermore, the value of public assets is being significantly diminished as a result of corrosion problems, with concrete sewer pipes being estimated to corrode at an average rate of 1-3 mm a year, and in the worst cases up to 7 mm annually; this results in costs of hundreds of millions of dollars in Australia alone.
+ </property>
+ <property name="email_from_address" type="string">help@arcs.org.au</property>
+ <property name="email_from_name"
+    type="string">SCORe Site Administrator</property>
+</site>

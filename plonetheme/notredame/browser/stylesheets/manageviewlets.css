@@ -1,0 +1,13 @@
+body#manage-viewlets #portal-top {
+  position: static;
+}
+
+body#manage-viewlets dt.portletHeader {
+  color: #000000;
+}
+
+body#manage-viewlets dd.portletItem {
+  border: 1px solid #000000;
+  padding: 1%;
+  width: 98%;
+}

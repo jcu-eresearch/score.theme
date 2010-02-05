@@ -1,0 +1,17 @@
+ul#portal-globalnav {
+  list-style: none;
+  border-bottom-width: 12px;
+  border-bottom-style: solid;
+}
+
+ul#portal-globalnav li {
+  display: block;
+  float: left;
+  padding: 0;
+}
+
+ul#portal-globalnav li a {
+  font-size: 1.2em;
+  padding: 0.15em 1.6em;
+  float: left;
+}

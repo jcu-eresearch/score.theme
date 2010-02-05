@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+}
+
+div#portal-columns {
+  padding: 0;
+  margin: 0;
+  border-top: none;
+}
+
+div#portal-column-content {
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.6em;
+  margin-top: 2em;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-top: 2em;
+}
+
+.visualPadding {
+  padding: 0.5em 5% 0 5%;
+  float: left;
+  clear: both;
+  width: 90%;
+}
+
+p {
+  padding: 0;
+  margin: 1em 0;
+}
+
+p.documentDescription {
+  font-weight: bold;
+}
+
+ul, ol {
+  line-height: 1.5em;
+}
+
+#portal-column-content .visualPadding {
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 94%;
+}
+
+table.listing {
+  margin: 1em 0;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-collapse: collapse;
+}
+
+table.listing td, table.listing th {
+  border-width: 0;
+  border-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  margin: 0;
+  padding: 0.5em;
+}
+
+table.listing ul, table.listing ol {
+  margin: 0;
+  padding-left: 1em;
+}
+
+div.eventDetails table.listing {
+  width: auto;
+  float: right;
+  clear: right;
+  margin: 1em 0 1em 1em;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+img.sortdirection {
+  margin: 0 0.2em;
+  width: 9px;
+}
+
+.LSTable {
+  padding-left: 0px;
+}
+
+.LSTable li {
+  display: block;
+  white-space: normal;
+}
+
+div.newsImageContainer {
+  float: right;
+  clear: right;
+  padding: 1em 0 0 1em;
+  margin: 0;
+}
+
+div.newsImageContainer p {
+  text-align: center;
+}
+
+img.tileImage {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+form {
+  clear: both;
+}
+
+fieldset {
+  margin: 0;
+  padding: 1em;
+}
+
+#login-form {
+  margin: 0 auto;
+  padding: 2em;
+}

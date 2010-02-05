@@ -1,0 +1,20 @@
+div#portal-footer {
+  float: left;
+  clear: both;
+  border-top: none;
+  text-align: center;
+  padding: 0.2em 0;
+}
+
+div#portal-footer p {
+  margin: 0.1em 0;
+}
+
+div#portal-colophon ul li {
+  color: #666;
+  font-size: 0.8em;
+}
+
+div#portal-colophon ul li a {
+  color: #666;
+}

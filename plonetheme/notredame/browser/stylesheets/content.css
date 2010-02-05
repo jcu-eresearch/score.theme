@@ -1,0 +1,30 @@
+.image-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.image-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.pullquote {   
+    border-left-width: 6px;
+    border-left-style: solid;
+    clear: right;
+    float: right;
+    font-weight: bold;
+    margin: 0 1em 1em 2em;
+    padding: 0 0 0 0.5em;
+    width: 37%;
+    line-height: 1.5em;
+}
+
+.callout {
+    border-left-width: 6px;
+    border-left-style: solid;
+    font-weight: bold;
+    margin: 1em; 
+    padding: 0 0 0 0.5em;
+    line-height: 1.5em;
+}

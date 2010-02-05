@@ -1,0 +1,8 @@
+div#portal-top {
+  width: auto;
+}
+
+div#portal-top ul {
+  float: right;
+  clear: both;
+}

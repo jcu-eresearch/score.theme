@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="plonetheme.notredame.various"
+               version="20080501-01"
+               handler="plonetheme.notredame.setuphandlers.setupVarious"
+               title="Notre Dame: miscellaneous import steps">
+    <dependency step="skins" />
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>

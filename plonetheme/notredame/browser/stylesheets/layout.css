@@ -1,0 +1,92 @@
+#visual-portal-wrapper {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#visual-padded-portal-wrapper {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-header {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-top {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-personaltools-wrapper {
+  float: right;
+  clear: right;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-personaltools {
+  padding: 0;
+  margin: 0;  
+}
+
+#portal-siteactions {
+  float: right;
+  clear: right;
+  padding: 0;
+  margin: 0;
+}
+
+#portal-logo {
+  float: left;
+  clear: left;
+}
+
+#portal-globalnav {
+  width: 100%;
+  float: left;
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+
+#region-content {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+#portal-columns {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+#portal-column-content {
+  margin: 0;
+  padding: 0;
+}
+
+#portal-footer {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+#portal-colophon {
+  float: left;
+  clear: both;
+  width: 100%;
+}
