@@ -1,0 +1,263 @@
+Introduction
+============
+
+First, we must perform some setup. We use the testbrowser that is shipped
+with Five, as this provides proper Zope 2 integration. Most of the 
+documentation, though, is in the underlying zope.testbrower package.
+
+    >>> from Products.Five.testbrowser import Browser
+    >>> browser = Browser()
+    >>> portal_url = self.portal.absolute_url()
+
+The following is useful when writing and debugging testbrowser tests. It lets
+us see all error messages in the error_log.
+
+    >>> self.portal.error_log._ignored_exceptions = ()
+
+With that in place, we can go to the portal front page and log in. We will
+do this using the default user from PloneTestCase:
+
+    >>> from Products.PloneTestCase.setup import portal_owner, default_password
+
+    >>> browser.open(portal_url)
+
+We have the login portlet, so let's use that.
+
+    >>> browser.getControl(name='__ac_name').value = 'contributor1'
+    >>> browser.getControl(name='__ac_password').value = default_password
+    >>> browser.getControl(name='submit').click()
+
+Here, we set the value of the fields on the login form and then simulate a
+submit click.
+
+We then test that we are still on the portal front page:
+
+    >>> browser.url == portal_url
+    True
+
+And we ensure that we get the friendly logged-in message:
+
+    >>> "You are now logged in" in browser.contents
+    True
+
+Testing the dummy mail host
+===========================
+
+    >>> from Products.CMFCore.utils import getToolByName
+    >>> mailhost = getToolByName(portal, 'MailHost')
+    >>> str(mailhost)[:-11]
+    '<plonetheme.notredame.tests.base.DummyMailHost instance at'
+
+    >>> site_email = 'site@example.com'
+    >>> portal.email_from_address = site_email
+    >>> portal.email_from_address == site_email
+    True
+
+Empty our mailbox first.
+
+    >>> dummy = mailhost.readMailBox()
+
+Setting up our content rules
+============================
+
+Login as the manager:
+
+    >>> browser.open(portal_url + '/login_form')
+    >>> browser.getControl(name='__ac_name').value = 'manager1'
+    >>> browser.getControl(name='__ac_password').value = 'secret'
+    >>> browser.getControl(name='submit').click()
+
+Turn on content rules:
+    >>> browser.open(portal_url)
+    >>> browser.getLink('Site Setup').click()
+    >>> browser.getLink('Content Rules').click()
+    >>> browser.getControl("Enable globally").selected = True
+    >>> browser.getControl('Save').click()
+
+Create the TAC1 folder and assign the rule:
+    >>> browser.open(portal_url)
+    >>> browser.getLink('Add new').click()
+    >>> browser.getControl('Folder').click()
+    >>> browser.getControl(name='form.button.Add').click()
+    >>> browser.getControl(name='title').value = 'TAC1'
+    >>> browser.getControl(name='form.button.save').click()
+    >>> browser.getLink('Rules').click()
+    >>> ctrl = browser.getControl(name='rule_id').controls[0]
+    >>> ctrl.selected = True
+    >>> browser.getControl('Add').click()   
+    >>> 'Email notification to the TAC1 group when new items published.' in browser.contents
+    True
+
+Create the TAC2 folder and assign the rule:
+    >>> browser.open(portal_url)
+    >>> browser.getLink('Add new').click()
+    >>> browser.getControl('Folder').click()
+    >>> browser.getControl(name='form.button.Add').click()
+    >>> browser.getControl(name='title').value = 'TAC2'
+    >>> browser.getControl(name='form.button.save').click()
+    >>> browser.getLink('Rules').click()
+    >>> ctrl = browser.getControl(name='rule_id').controls[1]
+    >>> ctrl.selected = True
+    >>> browser.getControl('Add').click()   
+    >>> 'Email notification to the TAC2 group when new items published' in browser.contents
+    True
+
+Create the TAC3 folder and assign the rule:
+    >>> browser.open(portal_url)
+    >>> browser.getLink('Add new').click()
+    >>> browser.getControl('Folder').click()
+    >>> browser.getControl(name='form.button.Add').click()
+    >>> browser.getControl(name='title').value = 'TAC3'
+    >>> browser.getControl(name='form.button.save').click()
+    >>> browser.getLink('Rules').click()
+    >>> ctrl = browser.getControl(name='rule_id').controls[2]
+    >>> ctrl.selected = True
+    >>> browser.getControl('Add').click()   
+    >>> 'Email notification to the TAC3 group when new items published' in browser.contents
+    True
+
+Testing our content rules
+=========================
+
+New material internally published in the TAC3 folder
+----------------------------------------------------
+Some content is published internally in the TAC3 folder and members of the group tac3_mailing_list are emailed.
+
+Open the TAC3 folder, add a page and submit it for publication.
+
+    >>> browser.open(portal_url+'/tac3')
+    >>> browser.getLink('Add new').click()
+    >>> browser.getControl('Page').click()
+    >>> browser.getControl(name='form.button.Add').click()
+    >>> browser.getControl(name='title').value = 'Report for TAC3'
+    >>> browser.getControl(name='description').value = 'Report for TAC3'
+    >>> browser.getControl(name='form.button.save').click()
+    >>> browser.getLink('Submit for publication').click()
+    >>> 'Pending review' in browser.contents
+    True
+
+Head to the content that was just submitted for approval.
+
+    >>> browser.open(portal_url+'/tac3/report-for-tac3')
+
+Approve it!
+
+    >>> browser.getLink('Publish internally').click()
+
+Check that it worked.
+ 
+    >>> 'Internally published' in browser.contents
+    True
+
+Check the mailbox to make sure we sent a mail to our group tac3_mailing_list.
+
+    >>> mailbox = mailhost.readMailBox()
+    >>> len(mailbox)
+    1
+
+Check that the one message in the box is correct.
+
+    >>> 'To: contributor3@example.com' in mailbox[0]
+    True
+    >>> 'From: site@example.com' in mailbox[0]
+    True
+    >>> 'Subject: [SCORe] TAC3: New content available' in mailbox[0]
+    True
+    >>> "Message: Hi,\n\n    New material has been published to the ARC Sewer Corrosion and Odour Research Linkage Project site in the TAC3 \n    area.\n\n    Content: Report for TAC3\n    URL: http://nohost/plone/tac3/report-for-tac3\n    Description: Report for TAC3" in mailbox[0]
+    True
+
+New material internally published in the TAC1 folder
+----------------------------------------------------
+Some content is published internally in the TAC1 folder and members of the group tac1_mailing_list are emailed.
+
+Open the TAC1 folder, add a page and submit it for publication.
+
+    >>> browser.open(portal_url+'/tac1')
+    >>> browser.getLink('Add new').click()
+    >>> browser.getControl('Page').click()
+    >>> browser.getControl(name='form.button.Add').click()
+    >>> browser.getControl(name='title').value = 'Report for TAC1'
+    >>> browser.getControl(name='description').value = 'Report for TAC1'
+    >>> browser.getControl(name='form.button.save').click()
+    >>> browser.getLink('Submit for publication').click()
+    >>> 'Pending review' in browser.contents
+    True
+
+Head to the content that was just submitted for approval.
+
+    >>> browser.open(portal_url+'/tac1/report-for-tac1')
+
+Approve it!
+
+    >>> browser.getLink('Publish internally').click()
+
+Check that it worked.
+ 
+    >>> 'Internally published' in browser.contents
+    True
+
+Check the mailbox to make sure we sent a mail to our group tac1_mailing_list.
+
+    >>> mailbox = mailhost.readMailBox()
+    >>> len(mailbox)
+    1
+
+Check that the one message in the box is correct.
+
+    >>> 'To: contributor1@example.com' in mailbox[0]
+    True
+    >>> 'From: site@example.com' in mailbox[0]
+    True
+    >>> 'Subject: [SCORe] TAC1: New content available' in mailbox[0]
+    True
+    >>> "Message: Hi,\n\n    New material has been published to the ARC Sewer Corrosion and Odour Research Linkage Project site in the TAC1 \n    folder.\n\n    Content: Report for TAC1\n    URL: http://nohost/plone/tac1/report-for-tac1\n    Description: Report for TAC1" in mailbox[0]
+    True
+
+New material internally published in the TAC2 folder
+----------------------------------------------------
+Some content is published internally in the TAC2 folder and members of the group tac2_mailing_list are emailed.
+
+Open the TAC2 folder, add a page and submit it for publication.
+
+    >>> browser.open(portal_url+'/tac2')
+    >>> browser.getLink('Add new').click()
+    >>> browser.getControl('Page').click()
+    >>> browser.getControl(name='form.button.Add').click()
+    >>> browser.getControl(name='title').value = 'Report for TAC2'
+    >>> browser.getControl(name='description').value = 'Report for TAC2'
+    >>> browser.getControl(name='form.button.save').click()
+    >>> browser.getLink('Submit for publication').click()
+    >>> 'Pending review' in browser.contents
+    True
+
+Head to the content that was just submitted for approval.
+
+    >>> browser.open(portal_url+'/tac2/report-for-tac2')
+
+Approve it!
+
+    >>> browser.getLink('Publish internally').click()
+
+Check that it worked.
+ 
+    >>> 'Internally published' in browser.contents
+    True
+
+Check the mailbox to make sure we sent a mail to our group tac2_mailing_list.
+
+    >>> mailbox = mailhost.readMailBox()
+    >>> len(mailbox)
+    1
+
+Check that the one message in the box is correct.
+
+    >>> 'To: contributor2@example.com' in mailbox[0]
+    True
+    >>> 'From: site@example.com' in mailbox[0]
+    True
+    >>> 'Subject: [SCORe] TAC2: New content available' in mailbox[0]
+    True
+    >>> mailbox[0]
+    >>> "Message: Hi,\n\n    New material has been published to the ARC Sewer Corrosion and Odour Research Linkage Project site in the TAC2 \n    area.\n\n    Content: Report for TAC2\n    URL: http://nohost/plone/tac2/report-for-tac2\n    Description: Report for TAC2"
+    True
+

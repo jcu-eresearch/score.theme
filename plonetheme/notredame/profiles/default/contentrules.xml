@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<contentrules>
+ <rule name="email_TAC1_on_new_content"
+    title="New Items Available in TAC1 area"
+    description="Email notification to the TAC1 group when new items published."
+    enabled="True" event="Products.CMFCore.interfaces.IActionSucceededEvent"
+    stop-after="False">
+  <conditions>
+      <condition type="plone.conditions.WorkflowTransition">
+          <property name="wf_transitions">
+              <element>publish_internally</element>
+          </property>
+      </condition>
+  </conditions>
+  <actions>
+   <action type="collective.easytemplate.actions.Mail">
+    <property
+       name="source">{{ portal.getProperty('email_from_address') }}</property>
+    <property name="message">{%- set siteTitle = portal.title -%}
+    Hi,
+
+    New material has been published to the {{ siteTitle }} site in the TAC1 
+    folder.
+
+    Content: {{ context.title }}
+    URL: {{ context.absolute_url() }}
+    Description: {{ context.Description() }}
+
+    Regards,
+    
+    Site Administrator
+    {{ siteTitle }}</property>
+    <property
+       name="recipients">{{ context.restrictedTraverse('@@getGroupEmails')('tac1_mailing_list') }}</property>
+    <property name="subject">[SCORe] TAC1: New content available</property>
+   </action>
+  </actions>
+ </rule>
+
+ <rule name="email_TAC2_on_new_content"
+    title="New Items Available in TAC2 area"
+    description="Email notification to the TAC2 group when new items published."
+    enabled="True" event="Products.CMFCore.interfaces.IActionSucceededEvent"
+    stop-after="False">
+  <conditions>
+      <condition type="plone.conditions.WorkflowTransition">
+          <property name="wf_transitions">
+              <element>publish_internally</element>
+          </property>
+      </condition>
+  </conditions>
+  <actions>
+   <action type="collective.easytemplate.actions.Mail">
+    <property
+       name="source">{{ portal.getProperty('email_from_address') }}</property>
+    <property name="message">{%- set siteTitle = portal.title -%}
+    Hi,
+
+    New material has been published to the {{ siteTitle }} site in the TAC2 
+    area.
+
+    Content: {{ context.title }}
+    URL: {{ context.absolute_url() }}
+    Description: {{ context.Description() }}
+
+    Regards,
+
+    Site Administrator
+    {{ siteTitle }}</property>
+    <property
+       name="recipients">{{ context.restrictedTraverse('@@getGroupEmails')('tac2_mailing_list') }}</property>
+    <property name="subject">[SCORe] TAC2: New content available</property>
+   </action>
+  </actions>
+ </rule>
+ <rule name="email_TAC3_on_new_content"
+    title="New Items Available in TAC3 area"
+    description="Email notification to the TAC3 group when new items published."
+    enabled="True" event="Products.CMFCore.interfaces.IActionSucceededEvent"
+    stop-after="False">
+  <conditions>
+      <condition type="plone.conditions.WorkflowTransition">
+          <property name="wf_transitions">
+              <element>publish_internally</element>
+          </property>
+      </condition>
+  </conditions>
+  <actions>
+   <action type="collective.easytemplate.actions.Mail">
+    <property
+       name="source">{{ portal.getProperty('email_from_address') }}</property>
+    <property name="message">{%- set siteTitle = portal.title -%}
+    Hi,
+
+    New material has been published to the {{ siteTitle }} site in the TAC3 
+    area.
+
+    Content: {{ context.title }}
+    URL: {{ context.absolute_url() }}
+    Description: {{ context.Description() }}
+
+    Regards,
+
+    Site Administrator
+    {{ siteTitle }}</property>
+    <property
+       name="recipients">{{ context.restrictedTraverse('@@getGroupEmails')('tac3_mailing_list') }}</property>
+    <property name="subject">[SCORe] TAC3: New content available</property>
+   </action>
+  </actions>
+ </rule>
+</contentrules>

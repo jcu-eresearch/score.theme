@@ -5,7 +5,7 @@
     i18n_domain="plonetheme.notredame">
 
     <include package="plone.app.portlets" />
-        
+
     <browser:page
         for="*"
         name="manage-viewlets"
@@ -101,6 +101,13 @@
         name="plonetheme.notredame.templates"
         directory="templates"
         layer=".interfaces.IPlonethemeNotredameLayer"
+        />
+
+    <browser:view
+        for="*"
+        name="getGroupEmails"
+        class=".getGroupEmails.GroupMailView"
+        permission="zope2.View"
         />
 
 </configure>

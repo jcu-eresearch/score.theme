@@ -26,6 +26,7 @@ setup(name='plonetheme.notredame',
       install_requires=[
           'setuptools',
           'plone.browserlayer',
+          'collective.easytemplate', #need this for content rules
       ],
       entry_points="""
       # -*- Entry points: -*-
