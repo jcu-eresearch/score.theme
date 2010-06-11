@@ -6,3 +6,4 @@ class PathBarViewlet(common.PathBarViewlet):
     """
     
     render = ViewPageTemplateFile('templates/pathbar.pt')
+

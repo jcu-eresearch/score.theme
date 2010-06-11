@@ -1,61 +1,71 @@
 <?xml version="1.0"?>
 <object name="portal_actions" meta_type="Plone Actions Tool"
-   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <object name="document_actions" meta_type="CMF Action Category">
-  <property name="title"></property>
-  <object name="rss" meta_type="CMF Action" i18n:domain="plone">
-   <property name="visible">True</property>
-  </object>
- </object>
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    <object name="document_actions" meta_type="CMF Action Category">
+        <property name="title"></property>
+        <object name="rss" meta_type="CMF Action" i18n:domain="plone">
+            <property name="visible">True</property>
+        </object>
+    </object>
 
- <object name="site_actions" meta_type="CMF Action Category">
-  <property name="title"></property>
-  <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
-   <property name="visible">False</property>
-  </object>
-  <object name="contact" meta_type="CMF Action" i18n:domain="plone" insert-after="sitemap">
-   <property name="title" i18n:translate="">Contact Us</property>
-   <property
-      name="url_expr">string:${globals_view/navigationRootUrl}/contact-us</property>
-  </object>
-  <object name="help" meta_type="CMF Action" i18n:domain="plone" insert-after="contact">
-   <property name="title" i18n:translate="">Help</property>
-   <property name="description" i18n:translate=""></property>
-   <property
-      name="url_expr">string:${globals_view/navigationRootUrl}/help</property>
-   <property name="icon_expr"></property>
-   <property name="available_expr">python:(member is not None)</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
-  <object name="links" meta_type="CMF Action" i18n:domain="plone" insert-after="help">
-   <property name="title" i18n:translate="">Links</property>
-   <property name="description" i18n:translate="">Useful links</property>
-   <property
-      name="url_expr">string:${globals_view/navigationRootUrl}/links</property>
-   <property name="icon_expr"></property>
-   <property name="available_expr">python:(member is not None)</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
- </object>
- <object name="object" meta_type="CMF Action Category">
-  <property name="title"></property>
-  <object name="syndication" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">RSS</property>
-   <property name="description" i18n:translate=""></property>
-   <property name="url_expr">string:${folder_url}/synPropertiesForm</property>
-   <property name="icon_expr"></property>
-   <property
-      name="available_expr">python:folder is object and portal.portal_syndication.isSiteSyndicationAllowed()</property>
-   <property name="permissions">
-    <element value="Manage properties"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
- </object>
+    <object name="site_actions" meta_type="CMF Action Category">
+        <property name="title"></property>
+        <object name="accessibility" meta_type="CMF Action"
+            i18n:domain="plone">
+            <property name="visible">False</property>
+        </object>
+        <object name="contact" meta_type="CMF Action" i18n:domain="plone"
+            insert-after="sitemap">
+            <property name="title" i18n:translate="">Contact Us</property>
+            <property name="url_expr">
+                string:${globals_view/navigationRootUrl}/contact-us</property>
+        </object>
+        <object name="help" meta_type="CMF Action" i18n:domain="plone"
+            insert-after="contact">
+            <property name="title" i18n:translate="">Help</property>
+            <property name="description" i18n:translate=""></property>
+            <property name="url_expr">
+                string:${globals_view/navigationRootUrl}/help</property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">
+                python:(member is not None)</property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+        <object name="links" meta_type="CMF Action" i18n:domain="plone"
+            insert-after="help">
+            <property name="title" i18n:translate="">Links</property>
+            <property name="description" i18n:translate="">
+                Useful links</property>
+            <property name="url_expr">
+                string:${globals_view/navigationRootUrl}/links</property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">
+                python:(member is not None)</property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+    </object>
+    <object name="object" meta_type="CMF Action Category">
+        <property name="title"></property>
+        <object name="syndication" meta_type="CMF Action" i18n:domain="plone">
+            <property name="title" i18n:translate="">RSS</property>
+            <property name="description" i18n:translate=""></property>
+            <property name="url_expr">
+                string:${folder_url}/synPropertiesForm</property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">
+                python:folder is object and 
+                portal.portal_syndication.isSiteSyndicationAllowed()
+            </property>
+            <property name="permissions">
+                <element value="Manage properties"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+    </object>
 </object>

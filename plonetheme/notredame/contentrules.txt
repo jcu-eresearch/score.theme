@@ -257,7 +257,6 @@ Check that the one message in the box is correct.
     True
     >>> 'Subject: [SCORe] TAC2: New content available' in mailbox[0]
     True
-    >>> mailbox[0]
-    >>> "Message: Hi,\n\n    New material has been published to the ARC Sewer Corrosion and Odour Research Linkage Project site in the TAC2 \n    area.\n\n    Content: Report for TAC2\n    URL: http://nohost/plone/tac2/report-for-tac2\n    Description: Report for TAC2"
+    >>> "Message: Hi,\n\n    New material has been published to the ARC Sewer Corrosion and Odour Research Linkage Project site in the TAC2 \n    area.\n\n    Content: Report for TAC2\n    URL: http://nohost/plone/tac2/report-for-tac2\n    Description: Report for TAC2" in mailbox[0]
     True
 

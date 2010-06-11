@@ -70,7 +70,7 @@
         layer=".interfaces.IPlonethemeNotredameLayer"
         permission="zope2.View"
     />
-
+    
     <!-- Portlet overrides -->
     
     <plone:portletRenderer

@@ -12,14 +12,6 @@ class GroupMailView(BrowserView):
         to a set and then into a string with email addresses comma
         separated."""
 
-        def raising(self, info):
-            import traceback
-            #traceback.print_tb(info[2])
-            print info[1]
-
-        from Products.SiteErrorLog.SiteErrorLog import SiteErrorLog
-        SiteErrorLog.raising = raising
-
         to_list = ""
         address_list = []
 
@@ -27,6 +19,8 @@ class GroupMailView(BrowserView):
         if groupName is '':
             self.context.plone_log('ERROR: groupName parameter not supplied'
                                    ' in call')
+            return 
+            
         grp = self.context.acl_users.getGroup(groupName)
         if grp == None: 
             self.context.plone_log('ERROR: No group with than "' + groupName + 
