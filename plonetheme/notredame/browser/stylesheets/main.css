@@ -140,3 +140,14 @@ fieldset {
   margin: 0 auto;
   padding: 2em;
 }
+
+div.suppressVisualEditor[style] {
+margin-top: -1.7em !important;
+}
+span.required {
+  font-size: 70%;
+}
+
+#content a.link-overlay {
+    border-bottom: 1px dotted #205c90 !important;
+}

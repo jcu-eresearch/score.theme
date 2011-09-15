@@ -6,14 +6,14 @@
 
     <include package="plone.app.portlets" />
 
-    <browser:page
+    <!--<browser:page
         for="*"
         name="manage-viewlets"
         class="plone.app.viewletmanager.manager.ManageViewlets"
         template="templates/manage-viewlets.pt"
         permission="cmf.ManagePortal"
         layer=".interfaces.IPlonethemeNotredameLayer"
-        />
+        />-->
 
     <!-- Viewlets registration -->
     <browser:viewlet
@@ -24,7 +24,7 @@
         permission="zope.Public"
         layer=".interfaces.IPlonethemeNotredameLayer"
         />
-    
+
     <browser:viewlet
         name="plone.site_actions"
         for="*"
@@ -70,16 +70,16 @@
         layer=".interfaces.IPlonethemeNotredameLayer"
         permission="zope2.View"
     />
-    
+
     <!-- Portlet overrides -->
-    
+
     <plone:portletRenderer
         portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
         template="templates/calendar.pt"
         for="*"
         layer=".interfaces.IPlonethemeNotredameLayer"
         />
-        
+
     <!-- Zope 3 browser resources -->
 
     <!-- Resource directory for images -->

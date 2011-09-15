@@ -123,7 +123,6 @@ body#content.kupu {
 .contentActions a {
   text-decoration: none;
   color: &dtml-contentViewFontColor;;
-  padding: 0 0.5em;
   cursor: pointer;
 }
 
@@ -467,8 +466,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 .formControls, .documentEditable .formControls {
   margin: 0;
-  padding: 1em 0;
-  float: left;
   clear: both;
   width: 100%;
 }
